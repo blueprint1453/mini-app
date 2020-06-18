@@ -1,0 +1,72 @@
+<!--index.wxml-->
+<view class="container">
+    <view class="banner">
+        <view class="user-local">
+            <image src="../../imgs/icon_geo.png" />
+            <text>南山区 桃园路</text>
+        </view>
+        <view class="broad">
+            <view class="icon-wrapper">
+                <image src="../../imgs/icon_broad.png" />
+            </view>
+            <view class="broad-title"><text>爱花人请打开，这一组夏花浓烈而奔放。</text></view>
+        </view>
+        <view class="post-btn">
+            <image src="../../imgs/icon_post.png" />
+            <text>海报</text>
+        </view>
+        <view class="main-data">
+            <view class="temp"> 31℃</view>
+            <view class="p1">
+                <text class="">多云</text>
+                <view class="line"></view>
+                <view class="pm"><text>17</text><text>优</text></view>
+            </view>
+            <view class="p2">
+              <view><text>风力</text><text>4级</text></view>
+              <view><text>湿度</text><text>69%</text></view>
+              <view><text>气压</text><text>997hPa</text></view>
+            </view>
+        </view>
+    </view>
+
+    <view class="text">
+        <view class="line_flag"></view>
+        <text>主题馆</text>
+    </view>
+    
+    <view class="venues_box">
+        <view class="venues_list">
+            <block wx:for="{{venuesItems}}">
+                <view class="venues_item">
+                    <navigator url="../brand/index?id={{item.id}}">
+                        <image src="{{item.smallpic}}"/>
+                    </navigator>
+                </view>
+            </block>
+        </view>
+    </view>
+
+    <view class="text">
+        <view class="line_flag"></view>
+        <text>环球精选</text>
+    </view>
+
+    <!-- <view class="choice_box">
+        <view class="choice_list">
+            <block wx:for="{{choiceItems}}">
+                <navigator url="../details/index?id={{item.id}}">
+                    <view class="choice_item">
+                        <image src="{{item.goodspics}}"/>
+                        <view class="title">{{item.title}}</view>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+    </view> -->
+
+    <!-- <loading hidden="{{loadingHidden}}">
+        加载中...
+    </loading> -->
+
+</view>
